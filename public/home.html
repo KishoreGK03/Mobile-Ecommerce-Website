@@ -1,0 +1,555 @@
+<html>
+    <title>
+        HISENSE|Home  
+    </title>
+    <style>   
+    body{
+      background-color:black;
+      background-image: url(background.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-blend-mode:luminosity;
+    }
+    .midnav{
+      float: right;
+      overflow: hidden;
+      width: 50%;
+      margin-right: 8%;
+      margin-top: 10px;
+    }
+    .navi {
+      float: left;
+      overflow: hidden;
+      background-color: black;
+      width: 76.1%;
+      margin-left: 12%;
+      margin-top: 10px;
+    }
+    .navi a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 50px;
+      text-decoration: none;
+      font-size: 22px;
+    }
+    .navi a:hover {
+      background-color: rgba(201, 201, 201, 0.83);
+      color: black;
+    }
+    
+    .container {
+      position: relative;
+      width: 100;
+      margin-left: 8%;
+      max-width: 400px;
+      float:left;
+     }
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+     }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .3s ease;
+    }
+    .container:hover .overlay {
+      opacity: 1;
+    }
+    #slideshow {
+      margin: 80px auto;
+      position: relative;
+      width: 240px;
+      height: 240px;
+      padding: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.719);
+    }
+    #slideshow > div {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+    }
+    *{box-sizing: border-box;}
+    .mySlides {display: none;}
+    .mySlides2 {display: none;}
+    
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: 0.5s ease;
+    }
+
+    .active {
+      background-color: #494848;
+    }
+
+    .fade {
+      animation-name:fade;
+      animation-duration: 3.5s;
+    }
+
+    @keyframes fade {
+      from {opacity: .1} 
+      to {opacity: 1}
+    }
+
+    @media only screen and (max-width: 300px) {
+      .text {font-size: 11px}
+    }
+
+    .slideshow-container2 {
+      max-width: 330px;
+      position: relative;
+      margin: auto;
+      float: left;
+      float: left;
+      margin-left: 10%;
+      margin-top: 20px;
+    }
+    .prev,.next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover,.next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .head{
+      float: right;
+      overflow: hidden;
+      background-color: black;
+      width: 76.1%;
+      margin-right: 20%;
+      margin-top: 10px;
+    }
+    p{
+      color: white;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .ip{
+      float: left;
+      margin-left: 30px;
+      margin-top: 10px;
+    }
+    .featured{
+      float: left;
+      margin-left: 10%;
+    }
+    .hotdeals{
+      float: left;
+      margin-left: 10%;
+    }
+    .categories{
+      float: left;
+      margin-left: 10%;
+    }
+    .im img{
+      transition: 1s ease;
+    }
+
+    .ip img:hover{
+      -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      transform: scale(1.05);
+      transition: 1s ease;
+      cursor: pointer;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+      float: left;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    .item{
+      float: left;
+      margin-left: 150px;
+      background-color: rgb(29,29,29);
+      width: 80%;
+      margin-top: 10px;
+    }
+    .mySlides3 {display: none;}
+
+    .slideshow-container3 {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+      float: left;
+      margin-left: 5%;
+    }
+    .prev,.next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover,.next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+        /*add to cart button*/
+
+    .buttoncart {
+      appearance: none;
+      background-color: transparent;
+      border: 2px solid #ffffff;
+      border-radius: 15px;
+      box-sizing: border-box;
+      color: #ffffff;
+      cursor: pointer;
+      display: inline-block;
+      font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      font-size: 16px;
+      font-weight: 600;
+      line-height: normal;
+      margin: 0;
+      min-height: 60px;
+      min-width: 0;
+      outline: none;
+      padding: 16px 24px;
+      text-align: center;
+      text-decoration: none;
+      transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: 200px;
+      will-change: transform;
+    }
+
+    .buttoncart:disabled {
+      pointer-events: none;
+    }
+
+    .buttoncart:hover {
+      color: rgb(0, 0, 0);
+      background-color: #ffffff;
+      box-shadow: rgb(0, 0, 0) 0 8px 15px;
+      transform: translateY(-2px);
+    }
+
+    .buttoncart:active {
+      box-shadow: none;
+      transform: translateY(0);
+    }
+    .description{
+      float:left;
+      margin-left: 30px;
+      margin-top: 25px;
+      max-width: 700px;
+    }
+    </style>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <p style="font-size: 25px;margin-left: 15px;">Categories</p>
+    
+      <a href="mobiles.html">Mobiles</a>
+      <a href="laptops.html">Laptops</a>
+      <a href="accessories.html">Accessories</a>
+      <a href="watches.html">Watches</a>
+    </div>
+    
+    <div id="main">
+      <span style="font-size:50px;cursor:pointer;color: white;font-weight:100;" onclick="openNav()">&#9776;</span>
+    </div>
+    <div>
+      <div class="container">
+        <img src="images/logo_b.png" alt="logo" class="image" width="100">
+        <div class="overlay">
+          <img src="images/logo_w.png" alt="logo" class="image" width="100">
+        </div>
+      </div>
+      <hr style="margin-top: 10px;float: left;width: 76.1%;margin-left: 11.95%;">
+
+      <div class="navi">
+        <a href="home.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+    <hr style="margin-top: 10px;float: left;width: 76.1%;margin-left: 11.95%;">
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="images/slideshow5.jpg" style="width:100%;">
+      </div>
+      <div class="mySlides fade">
+        <img src="images/slideshow6.jpg" style="width:100%;">
+      </div>
+      <div class="mySlides fade">
+        <img src="images/slideshow7.jpg" style="width:100%;">
+      </div>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    <br>
+    <div class="head">
+      <p style="font-size: 35px;">
+        Apple in HI-SENSE
+      </p>
+    </div>
+    
+    
+  
+    <div style="margin-left: 4%;">
+      <div class="ip">
+        <a href="mobiles.html#iphone13"><img src="images/ip13.png" alt="" width="650px" height="330px" style="border-radius: 20px;"></a>
+        <a href="mobiles.html#iphone12"><img src="images/ip12.png" alt="" width="650px" height="330px" style="margin-left:20px ; border-radius: 20px;"></a>
+      </div >
+      <div class="ip">
+        <a href="accessories.html#airpod"><img src="images/airpods.png" alt="" width="424px" height="203px" style="border-radius: 20px;"></a>
+        <a href="mobiles.html#ipad"><img src="images/ipad.png" alt="" width="424px" height="203px" style="margin-left:20px ; border-radius: 20px;"></a>
+        <a href="watches.html#iwatch"><img src="images/iwatch.png" alt="" width="424px" height="203px" style="margin-left:20px ; border-radius: 20px;"></a>
+      </div >
+    </div >
+
+
+    <div class="head">
+      <p style="font-size: 35px;">
+        Featured By Us
+      </p>
+    </div>
+
+    <div style="margin-left: 4%;">
+      <div class="ip">
+        <img src="images/samsung.webp" width="600px" style="border-radius: 10px;margin-left: 10px;">
+        <img src="images/mi.jpg" width="633px" style="border-radius: 10px; margin-left: 40px;">
+      </div>
+    </div>
+    <div class="head">
+      <p style="font-size: 30px;">
+        Hot Deals
+      </p>
+    </div>
+    <div style="margin-left: 3%;">
+      <div class="">
+        <img src="images/acer.jpg"  width="460px" style="border-radius: 0px;margin-left: 10px;">
+        <img src="images/acer1.jpg" width="460px" style="border-radius: 0px; margin-left: 0px;">
+        <img src="images/acer2.jpg" width="460px" style="border-radius: 0px; margin-left: 0px;">
+      </div>
+    </div>
+
+    </div>
+    <div class="head">
+      <p style="font-size: 30px;">
+        Categories
+      </p>
+    </div>
+
+
+    <div class="categories">
+      <div class="ip">
+        <a href="mobiles.html"><img src="images/home/mobiles.jpg" width="459px" height="150px" style="border-radius: 20px; margin-left: 75px;"></a>
+        <a href="laptops.html"><img src="images/home/laptop.jpg" width="459px" height="150px" style="margin-left:20px ; border-radius: 20px;"></a>
+      </div >
+      <div class="ip">
+        <a href="accessories.html"><img src="images/home/accessories.jpg" width="459px" height="150px" style="border-radius: 20px; margin-left: 75px;"></a>
+        <a href="watches.html"><img src="images/home/watches.jpg" width="459px" height="150px" style="margin-left:20px ; border-radius: 20px;"></a>
+      </div >
+    </div>
+
+    <footer style="background-color: rgb(29,29,29);margin-top: 550px; height: 190px;">
+      <div >
+          <div style="float: left;color: rgb(255, 255, 255); margin-left: 50px;">
+            <br><br>
+            <p style="color: rgb(255, 255, 255); font-weight:300 ;">
+                  <a href="home.html" style="text-decoration: None;color:rgb(255, 255, 255)">Home</a> |
+                  <a href="" style="text-decoration: None;color:rgb(255, 255, 255)">AboutUs</a> |
+                  <a href="" style="text-decoration: None;color:rgb(255, 255, 255)">Contact</a>       
+              </p>
+              <p style="float: left;color: rgb(255, 255, 255);">HISENSE © 2022</p>
+              <div style="margin-top: 30px;">
+                <i></i>
+                <p><a href="mailto:support@company.com">office.hisense@gmail.com</a></p>
+            </div>
+          </div>
+      
+          <div style="float: left; margin-left:500px;color: #fff;">
+      
+              <div>
+                  <i></i>
+                  <p style="color: rgb(255, 255, 255); font-size: 30px;"><span style="font-size:large"><img src="images/logo_w.png" height="100" style="margin-left: 10px;border-radius: 20px;"></span><br>HI-SENSE</p>
+              </div>
+      
+          </div>
+      
+          <div style="float:left ; margin-left:500px;margin-top: 50px;">
+              <div>
+                  <a href="#"><img src="images/fb.jpg" width="33px"></a>
+                  <a href="#"><img src="images/twitter.jpg" width="33px"></a>
+                  
+              </div>
+      
+          </div>
+      </div>
+  </footer>
+
+  </body>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 3000); 
+    }
+
+    showslides1(slideIndex);
+      function plusslides1(n) {
+        showslides1(slideIndex += n);
+      }
+      function currentSlide(n) {
+        showslides1(slideIndex = n);
+      }
+      function showslides1(n) {
+        var i;
+        var slides = document.getElementsByClassName("myslides2");
+        
+        if(n > slides.length) {
+          slideIndex = 1
+        }
+        if(n < 1) {
+          slideIndex = slides.length
+        }
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+        
+      }
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
+
+      showslides3(slideIndex);
+      function plusslides3(n) {
+        showslides3(slideIndex += n);
+      }
+      function currentSlide3(n) {
+        showslides3(slideIndex = n);
+      }
+      function showslides3(n) {
+        var i;
+        var slides = document.getElementsByClassName("myslides3");
+        
+        if(n > slides.length) {
+          slideIndex = 1
+        }
+        if(n < 1) {
+          slideIndex = slides.length
+        }
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+      }
+    </script>
+</html>

@@ -1,0 +1,249 @@
+<html>
+    <title>
+        HISENSE|Laptops|BuyNow
+    </title>
+    <style>
+        body{
+      background-color:black;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-blend-mode:luminosity;
+    }
+    /* Head*/
+    .midnav{
+      float: right;
+      overflow: hidden;
+      width: 50%;
+      margin-right: 8%;
+      margin-top: 10px;
+    }
+    .navi {
+      float: left;
+      overflow: hidden;
+      background-color: black;
+      width: 76.1%;
+      margin-left: 12%;
+      margin-top: 10px;
+    }
+    .navi a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 50px;
+      text-decoration: none;
+      font-size: 22px;
+    }
+    .navi a:hover {
+      background-color: rgba(201, 201, 201, 0.83);
+      color: black;
+    }
+    .container {
+      position: relative;
+      width: 100;
+      margin-left: 8%;
+      max-width: 400px;
+      float:left;
+     }
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+     }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .3s ease;
+    }
+    .container:hover .overlay {
+      opacity: 1;
+    }
+    /* Left navigation*/
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+      float: left;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+
+    .bodyp{
+        color: white;
+        width: 90%;
+        margin-left: 5%;
+        font-size: 20px;
+        line-height: 2;
+    }
+
+    form{
+        color: white;
+        margin-top: 100px;
+        float: left;
+        width: 76.1%;
+        margin-left: 11.95%;
+        text-align: center;
+    }
+    p{
+        color: white;
+        font-size: 20px;
+    }
+
+</style>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <p style="font-size: 25px;margin-left: 15px;">Categories</p>
+        <a href="mobiles.html">Mobiles</a>
+        <a href="laptops.html">Laptops</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="watches.html">Watches</a>
+    </div>
+    <div id="main">
+        <span style="font-size:50px;cursor:pointer;color: white;font-weight:100;" onclick="openNav()">&#9776;</span>
+    </div>
+    <div>
+        <div class="container">
+            <img src="images/logo_b.png" alt="logo" class="image" width="100">
+            <div class="overlay">
+            <img src="images/logo_w.png" alt="logo" class="image" width="100">
+            </div>
+        </div>
+        <hr style="margin-top: 10px;float: left;width: 76.1%;margin-left: 11.95%;">
+        <div class="navi">
+          <a href="home.html">Home</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+    <hr style="margin-top: 16px;float: left;width: 76.1%;margin-left: 11.95%;">
+
+    <form action="buynow" class="form" method="post">
+        <table width="100%" height="120%" >
+        <tr>
+            <th><label for="name"><p><b>Name:</b></p></label></th>  
+            <th><input type="text" name="name" autocomplete="off" style="width:250px;height: 40px;"/></th>  
+        </tr>
+        <tr> 
+            <th ><label for="email"><p><b>Email:</b></p></label></th>  
+            <th ><input type="email" name="email" autocomplete="off" style="width:250px;height: 40px;"/></th>  
+        </tr>
+        <tr> 
+            <th ><label for="phno"><p><b>Phone Number:</b></p></label></th>  
+            <th ><input type="tel" name="phno" autocomplete="off" style="width:250px;height: 40px;"/></th>  
+        </tr>
+        <tr> 
+            <th ><label for="city"><p><b>City:</b></p></label></th>  
+            <th><input type="text" name="city" autocomplete="off" style="width:250px;height: 40px;"/></th>  
+        </tr>
+        <tr> 
+            <th ><label for="zip"><p><b>Zip code:</b></p></label></th>  
+            <th><input type="text" name="zip" autocomplete="off" style="width:250px;height: 40px;"/></th>  
+        </tr>
+        <tr>  
+            <th ><label for="payment"><p><b>Payment : <br>(please pay using the QR) </b></p></label></th>  
+            <th>
+                <img src="images/qr.jpeg" style="height: 100px; width: 100px;">
+            </th>  
+        </tr>
+        <tr>  
+          <th><label for="transactionid"><p><b>UPI transaction Id:</b></p></label></th>  
+          <th><input type="text" name="transactionid" autocomplete="off" style="width:250px;height: 40px;" autocomplete="off"/></th>  
+        </tr>
+        <tr>  
+            <th colspan="2"><div align="right" style="margin-right:20px;"><input type="submit">  
+        </div></th>  
+        </tr>  
+        </table>  
+        </form>
+
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer style="background-color: rgb(29,29,29);width: 100%; height: 200px;float: left;margin-top: 50px;">
+        <div >
+            <div style="float: left;color: rgb(255, 255, 255); margin-left: 50px;">
+              <br><br>
+              <p style="color: rgb(255, 255, 255); font-weight:300 ;">
+                    <a href="home.html" style="text-decoration: None;color:rgb(255, 255, 255)">Home</a> |
+                    <a href="aboutus.html" style="text-decoration: None;color:rgb(255, 255, 255)">AboutUs</a>
+                </p>
+                <p style="float: left;color: rgb(255, 255, 255);">HISENSE © 2022</p>
+                <div style="margin-top: 30px;">
+                  <i></i>
+                  <p><a href="mailto:support@company.com">office.hisense@gmail.com</a></p>
+              </div>
+            </div>
+        
+            <div style="float: left; margin-left:425px;color: #fff;">
+                <div>
+                    <p style="color: rgb(255, 255, 255); font-size: 30px;"><span style="font-size:large"><img src="images/logo_w.png" height="100" style="margin-left: 10px;border-radius: 20px;"></span><br>HI-SENSE</p>
+                </div>
+        
+            </div>
+        
+            <div style="float:left ; margin-left:500px;margin-top: 50px;">
+                <div>
+                    <a href="#"><img src="images/fb.jpg" width="33px"></a>
+                    <a href="#"><img src="images/twitter.jpg" width="33px"></a>
+                    
+                </div>
+        
+            </div>
+        </div>
+    </footer>
+    </body>
+    <script>
+        /*left navigation*/
+        function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
+    </script>
+</html>
